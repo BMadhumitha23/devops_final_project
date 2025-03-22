@@ -1,0 +1,232 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #007bff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Products container */
+.products-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.products-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Product item styles */
+.product-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+  width: 100px; /* Adjust size */
+  height: 100px; /* Adjust size */
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.product-item h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.product-item button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-item button:hover {
+  background-color: #218838;
+}
+
+/* Cart container */
+.cart-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cart-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Cart item styles */
+.cart-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 50px; /* Adjust size */
+  height: 50px; /* Adjust size */
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.cart-item h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.cart-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Delete button styles */
+.delete-button {
+  margin-left: auto;
+  padding: 8px 12px;
+  background-color: #dc3545; /* Bootstrap danger color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Darker shade on hover */
+}
+
+/* Home container styles */
+.home-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-container h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.home-container p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Featured products section */
+.featured-products {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.featured-product {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  width: calc(33% - 20px); /* Adjust for 3 items in a row */
+  margin: 10px; /* Margin between products */
+}
+
+.featured-product:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.featured-product img {
+  width: 100%; /* Adjust to fit the card */
+  height: auto;
+  border-radius: 5px;
+}
+
+.featured-product h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.featured-product p {
+  color: #777;
+  font-size: 1.1em;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .product-item, .cart-item, .featured-product {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-item img, .cart-item img, .featured-product img {
+    width: 80%; /* Adjust size for smaller screens */
+    height: auto;
+  }
+
+  .featured-product {
+    width: 100%; /* Single column for featured products */
+  }
+}
